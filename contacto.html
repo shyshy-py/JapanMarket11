@@ -101,86 +101,54 @@
   <main id="main">
 
 <!--Formulario-->
-<div class="d1">
-<div id="contenedor">
-  
-  <form id="miFormulario">
-    
-      <label>Nombre:</label><br />
-      <input type="text" id="itNombre" class="campo" /> <br/>
-      <div id="mensaje1" class="errores"> Ingresa nombre valido</div>
+<section class="breadcrumbs">
+  <div class="contenedorcontacto">
+    <form action="" method="GET" class="form" id="formulario">
+      <div class="form-header">
+       <h1 class="form-tittle">C<span>ontacto</span></h1>
+      </div>
 
-      <label>E-mail:</label><br />
-      <input type="text" id="itMail" class="campo" /> <br/>
-      <div id="mensaje2" class="errores"> Ingresa correo valido</div>
+      <label for="txtNombre" class="form-label">*Nombre:</label>
+     <input
+        type="text"
+        name="txtNombre"
+        class="form-input"
+        id="txtNombre"
+        placeholder="Escriba su nombre"
+     />
 
-      <label>Asunto:</label><br />
-      <input type="text" id="itAsunto" class="campo" /> <br/>
-      <div id="mensaje3" class="errores"> Agrega un asunto</div>
+     <label for="txtEmail" class="form-label">*Correo Electronico:</label>
+     <input
+       type="email"
+       class="form-input"
+       name="txtEmail"
+       id="txtEmail"
+       placeholder="Escriba su Correo"
+     />
 
-     
+     <label for="txtAsunto" class="form-label">*Asunto:</label>
+     <input
+       type="text"
+       name="txtAsunto"
+       class="form-input"
+       id="txtAsunto"
+       placeholder="Escriba el Asunto aquí"
+     />
 
-      
-      <input type="submit" id="bEnviar" value="Enviar datos" class="boton" />
-      
-  </form>
-</div>
-</div>
+     <label for="mensaje" class="form-label">*Mensaje:</label>
+     <textarea
+       name="txtMensaje"
+       id="txtMensaje"
+       class="form-textarea"
+       placeholder="Escriba aquí su mensaje"
+     ></textarea>
+          <input type="submit" class="btn-submit" id="btnEnviarConsulta" value="Enviar Consulta">       
+        </form>
+        <script src="assets/js/validador.js"></script>
+      </div>
+    </section>
 
-<script>
-  //Expresión para validar un correo electrónico
-  var expr = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
-  //Expresión para validar edad de 18 a 60 años
-  
-  $(document).ready(function(){
-      //función click
-      $("#bEnviar").click(function(){
-          //Guardar en variables el valor que tengan las cajas de texto
-          //Por medio de los id's
-          //Y tener mejor manipulación de dichos valores
-          var nombre = $("#itNombre").val();
-          var correo = $("#itMail").val();
-          var asunto = $("#itAsunto").val();
-          
-
-          // --- Condicionales anidados ----
-          //Si nombre está vacío
-          //Muestra el mensaje
-          //Con false sale de los if's y espera a que sea pulsado de nuevo el botón de enviar
-          if(nombre == ""){
-              $("#mensaje1").fadeIn("slow");
-              return false;
-          }
-          //en otro caso, el mensaje no se muestra
-          else{
-              $("#mensaje1").fadeOut();
-
-              //Si correo está vacío y la expresión NO corresponde -test es función de JQuery
-              //Muestra el mensaje
-              //Con false sale de los if's y espera a que sea pulsado de nuevo el botón de enviar
-              if(correo == "" || !expr.test(correo)){
-                  $("#mensaje2").fadeIn("slow");
-                  return false;
-              }
-              else{
-                  $("#mensaje2").fadeOut();
-
-                  if(asunto == ""){
-                      $("#mensaje3").fadeIn("slow");
-                      return false;
-                  }
-                  else{
-                      $("#mensaje3").fadeOut();
-
-                      
-                  }
-              }
-          }
-
-      });//click
-  });//ready
 </script>
-    
   <!--Map-->
   <div class="contact">
     <div class="container-fluid">
