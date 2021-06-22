@@ -101,152 +101,57 @@
   <main id="main">
 
 <!--Formulario-->
-<div class="d1">
-<div id="contenedor">
-  
-  <form id="miFormulario">
-    
-      <label>Nombre:</label><br />
-      <input type="text" id="itNombre" class="campo" /> <br/>
-      <div id="mensaje1" class="errores"> Ingresa nombre valido</div>
-
-      <label>Rut:</label><br />
-      <input type="text" id="itRut" class="campo" /> <br/>
-      <div id="mensaje2" class="errores"> Ingresa rut valido</div>
-
-      <label>Correo:</label><br />
-      <input type="text" id="itCorreo" class="campo" /> <br/>
-      <div id="mensaje3" class="errores"> Ingresa Correo valido</div>
-     
-
-      <label>Contraseña:</label><br />
-      <input type="password" id="itContraseña" class="campo" /> <br/>
-      <div id="mensaje4" class="errores"> Ingresa contraseña</div>
-
-      <label>Confirmar Contraseña:</label><br />
-      <input type="password" id="itContraseña2" class="campo" /> <br/>
-      <div id="mensaje5" class="errores"> La contraseña no coincide</div>
-      <label>Direccion:</label><br />
-      <input type="text" id="itDireccion" class="campo" /> <br/>
-      <div id="mensaje6" class="errores"> Ingresa tu direccion</div>
-
-      <label>Comuna:</label><br />
-      <input type="text" id="itComuna" class="campo" /> <br/>
-      <div id="mensaje7" class="errores"> Ingresa la comuna</div>
-      <label>Region:</label><br />
-      <input type="text" id="itRegion" class="campo" /> <br/>
-      <div id="mensaje8" class="errores"> Ingresa tu region</div>
-
-      <label>Telefono</label><br />
-      <input type="text" id="itFono" class="campo" /> <br/>
-      <div id="mensaje9" class="errores"> Ingresa telefono valido</div>
-
-     
-
-      
-      <input type="submit" id="bEnviar" value="Enviar datos" class="boton" />
+<div class="container">
+  <form action="" class="form" id="form" autocomplete="off">
+    <p class="form-titulo">Regístrate</p>
+    <div class="form-input myname">
+      <input type="text" id="myname">
+      <label for="myname">Nombre</label>
+      <p class="mensajeError"></p>
+    </div>
+    <div class="form-input surname">
+      <input type="text" id="surname">
+      <label for="surname">Apellidos</label>
+      <p class="mensajeError"></p>
+    </div>
+    <div class="form-input email">
+      <input type="email" id="email">
+      <label for="email">Correo electrónico</label>
+      <p class="mensajeError"></p>
+    </div>
+    <div class="form-input mobile">
+      <input type="text" id="mobile">
+      <label for="mobile">Celular</label>
+      <p class="mensajeError"></p>
+    </div>
+    <div class="form-input password">
+      <input type="password" id="password">
+      <label for="password">Contraseña</label>
+      <p class="mensajeError"></p>
+    </div>
+    <div class="form-input repeatPassword">
+      <input type="password" id="repeatPassword">
+      <label for="repeatPassword">Repetir Contraseña</label>
+      <p class="mensajeError"></p>
+    </div>
+    <div class="form-termsAndConditions termsAndConditions">
+      <input type="checkbox" id="termsAndConditions">
+      <label for="termsAndConditions">He leído y acepto los </label>
+      <a href="#">Términos y Condiciones</a>
+      <p class="mensajeError"></p>
+    </div>
+    <div class="form-boton" >
+      <input type="submit" value="Enviar">
+    </div>
+    <p class="mensajeCorrecto"></p>
+  </form>
+</div>
       
   </form>
 </div>
 </div>
 
-<script>
-  //Expresión para validar un correo electrónico
-  var expr = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
-  //Expresión para validar edad de 18 a 60 años
-  
-  $(document).ready(function(){
-      //función click
-      $("#bEnviar").click(function(){
-          
-          var nombre = $("#itNombre").val();
-          var rut = $("#itRut").val();
-          var correo = $("#itCorreo").val();
-          var contraseña = $("#itContraseña").val();
-          var confirmarContraseña = $("#itContraseña2").val();
-          var direccion = $("#itDireccion").val();
-          var comuna = $("#itComuna").val();
-          var region = $("#itRegion").val();
-          var fono = $("#itFono").val();
-          
 
-          
-          if(nombre == ""){
-              $("#mensaje1").fadeIn("slow");
-              return false;
-          }
-         
-          else{
-              $("#mensaje1").fadeOut();
-
-              
-              if(rut == ""){
-                  $("#mensaje2").fadeIn("slow");
-                  return false;
-              }
-              else{
-                  $("#mensaje2").fadeOut();
-
-                  if(correo == "" || !expr.test(correo)){
-                  $("#mensaje3").fadeIn("slow");
-                  return false;
-              }
-              else{
-                  $("#mensaje3").fadeOut();
-                     
-                  
-                }
-              }
-              if (contraseña==""){
-                $("#mensaje4").fadeIn("slow");
-                return false;
-              }else{
-                $("#mensaje4").fadeOut();
-              }
-          
-              if (contraseña==confirmarContraseña){
-            $("#mensaje5").fadeOut();
-            
-          }else{
-          $("#mensaje5").fadeIn();
-          return false;
-          }
-          if (direccion==""){
-            $("#mensaje6").fadeIn("slow");
-            return false;
-          }else{
-            $("#mensaje6").fadeOut();
-          }
-          
-          if (comuna==""){
-            $("#mensaje7").fadeIn("slow");
-            return false;
-          }else{
-            $("#mensaje7").fadeOut();
-          }
-         
-          if (region==""){
-            $("#mensaje8").fadeIn("slow");
-            return false;
-          }else{
-            $("#mensaje8").fadeOut();
-          }
-          
-          if (fono==""){
-            $("#mensaje9").fadeIn("slow");
-            return false;
-          }else{
-            $("#mensaje9").fadeOut();
-          }
-          
-
-
-
-          }
-
-      });
-  });
-</script>
     
   
 
@@ -331,5 +236,7 @@
 
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/validadorLoginyregistro.js"></script>
   </body>
 </html>
+
