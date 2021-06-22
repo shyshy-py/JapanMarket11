@@ -89,26 +89,31 @@
 <div class="contenedor2"><br><br><br><br>
 
   <br>
-  <form class="formulario">
-    
-    <div class="r2">Iniciar Sesión </div> 
-     <div class="contenedor2">
-     
-     
-         
-         <div class="input-contenedor">
-         <i class="fas fa-user icon "></i>
-         <input type="text" placeholder="Rut o nombre de usuario">
-         
-         </div>
-         
-         <div class="input-contenedor">
-        <i class="fas fa-key icon"></i>
-         <input type="password" placeholder="Contraseña">
-         
-         </div>
-          
-</div>   
+<!--Formulario-->
+<div class="container">
+  <form action="" class="form" id="form" autocomplete="off">
+    <p class="form-titulo">Regístrate</p>
+    <div class="form-input myname">
+      <input type="text" id="myname">
+      <label for="myname">Nombre</label>
+      <p class="mensajeError"></p>
+    </div>
+    <div class="form-input password">
+      <input type="password" id="password">
+      <label for="password">Contraseña</label>
+      <p class="mensajeError"></p>
+    </div>
+    <div class="form-boton" >
+      <input type="submit" value="Enviar">
+    </div>
+    <p class="mensajeCorrecto"></p>
+  </form>
+</div>
+      
+  </form>
+</div>
+</div>
+
   </main>
 
 
@@ -191,5 +196,7 @@
 
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/validadorLoginyregistro.js"></script>
+
   </body>
 </html>
