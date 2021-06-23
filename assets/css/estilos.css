@@ -496,82 +496,80 @@ main{
 # Contacto
 --------------------------------------------------------------*/
 * {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
 
-.contenedorcontacto {
-  background-image: url(../img/tokyo.jpg);
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.contenedorcontacto .form .form-header .form-tittle {
-  font-weight: normal;
-  font-family: sans-serif;
-  color: red;
-  text-align: center;
-  padding: 14px 0px;
-}
-
-.contenedorcontacto .form .form-header .form-tittle span {
-  color: white;
-}
-
-.contenedorcontacto .form {
-  background: rgb(0, 0, 0, 0.6);
-  width: 90%;
-  max-width: 650px;
-  margin: auto;
-  padding: 5px 35px;
-  margin-top: 30px;
-  padding-bottom: 30px;
-  border-radius: 3px;
-}
-
-.contenedorcontacto .form .form-label {
-  text-align:left ;
-  display: block;
-  color: white;
-  font-size: 18px;
-  position: relative;
-}
-
-.contenedorcontacto .form .form-input,
-.form-textarea {
-  background: rgba(255, 255, 255, 0.658);
-  border: none;
-  outline: none;
-  border-bottom: 2px solid rgb(255, 0, 0);
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border: radius 2px;
-  font-size: 15px;
-  color: rgb(0, 0, 0);
-}
-
-.contenedorcontacto .form .form-textarea {
-  resize: vertical;
-  max-height: 150px;
-  min-height: 50px;
-}
-
-.contenedorcontacto .form .btn-submit {
-  width: 100%;
-  outline: none;
-  background: rgba(255, 0, 0, 0.87);
-  font-size: 16px;
-  border: none;
-  padding: 12px 0;
-  color: white;
-  cursor: pointer;
-}
-
-.contenedorcontacto .form .btn-submit:hover {
-  background: rgb(218, 39, 33);
-}
+  
+  .contenedorcontacto .form .form-header .form-tittle {
+    font-weight: normal;
+    font-family: sans-serif;
+    color: red;
+    text-align: center;
+    padding: 14px 0px;
+  }
+  
+  .contenedorcontacto .form .form-header .form-tittle span {
+    color: white;
+  }
+  
+  .contenedorcontacto .form {
+    background: rgb(0, 0, 0, 0.6);
+    width: 90%;
+    max-width: 650px;
+    margin: auto;
+    padding: 5px 35px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 3px;
+  }
+  
+  .contenedorcontacto .form .form-label {
+    text-align:left ;
+    display: block;
+    color: white;
+    font-size: 18px;
+    position: relative;
+  }
+  
+  .contenedorcontacto .form .form-input,
+  .form-textarea {
+    background: rgba(255, 255, 255, 0.658);
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(255, 0, 0);
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: radius 2px;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .contenedorcontacto .form .form-textarea {
+    resize: vertical;
+    max-height: 150px;
+    min-height: 50px;
+  }
+  
+  .contenedorcontacto .form .btn-submit {
+    width: 100%;
+    outline: none;
+    background: rgba(255, 0, 0, 0.87);
+    font-size: 16px;
+    border: none;
+    padding: 12px 0;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .contenedorcontacto .form .btn-submit:hover {
+    background: rgb(218, 39, 33);
+  }
+/*------------------------------------------------
+-----------FIN ESTILO CONTACTO-------------------
+-----------------------------------------------*/
