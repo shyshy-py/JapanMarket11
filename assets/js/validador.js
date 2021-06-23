@@ -24,7 +24,7 @@ $("#formulario").validate({
     messages: {
         txtNombre:{
             required: "El nombre es un campo obligatorio",
-            minlength: "Minimo 4 caracteres",
+            minlength: "Mínimo 4 caracteres",
             
         },
         txtEmail: {
@@ -33,15 +33,12 @@ $("#formulario").validate({
         },
         txtAsunto: {
             required: "El asunto es un campo obligatorio",
-            minlength: "Minimo 8 caracteres",
+            minlength: "Mínimo 8 caracteres",
         },
         txtMensaje: {
             required: "el mensaje es un campo obligatorio",
-            minlength: "El minimo de caracteres es 4",
-            maxlength: "Maximo 100 caracteres",
-        },
-        terminos: {
-            required: "Debe aceptar los terminos",
+            minlength: "El mínimo de caracteres es 4",
+            maxlength: "Máximo 100 caracteres",
         },
     },
 });
