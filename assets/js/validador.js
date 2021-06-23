@@ -36,7 +36,7 @@ $("#formulario").validate({
             minlength: "Mínimo 8 caracteres",
         },
         txtMensaje: {
-            required: "el mensaje es un campo obligatorio",
+            required: "El mensaje es un campo obligatorio",
             minlength: "El mínimo de caracteres es 4",
             maxlength: "Máximo 100 caracteres",
         },
